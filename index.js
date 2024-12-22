@@ -17,7 +17,7 @@ function superbowlWin(records) {
 // test.js
 
 const { expect } = require('chai');
-const superbowlWin = require('./index.js'); // Import the function from index.js
+const superbowWin = require('./index.js'); // Import the function from index.js
 
 describe('superbowlWin(record)', function () {
   const record = [
@@ -83,11 +83,11 @@ describe('superbowlWin(record)', function () {
   ];
 
   it('returns a year the Denver Broncos won the superbowl', function () {
-    expect(superbowlWin(record)).to.equal('2015'); // Denver Broncos won in 2015
+    expect(superbowWin(record)).to.equal('2015'); // Denver Broncos won in 2015
   });
 
   it('returns undefined if the record has no win objects', function() {
     const sadReality =  [ { result: "N/A" }, { result: "N/A" }, { result: "N/A" } ];
-    expect(superbowlWin(sadReality)).to.equal(undefined); // No wins in this record
+    expect(superbowWin(sadReality)).to.equal(undefined); // No wins in this record
   });
 });
